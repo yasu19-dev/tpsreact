@@ -1,111 +1,106 @@
 import React from 'react';
 import styled from 'styled-components';
 
-// --- STYLES ---
-const Card = styled.div`
+
+const CardContainer = styled.div`
+  width: 250px;
   background-color: white;
-  border: 1px solid #dee2e6;
-  border-radius: 0.375rem;
-  overflow: hidden;
-  position: relative; /* Pour positionner le badge */
-  display: flex;
-  flex-direction: column;
-  height: 100%;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden; /* Pour que l'image respecte les bords arrondis */
+  margin: 15px;
+  text-align: center;
+  position: relative;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  font-family: sans-serif;
 `;
 
 const ProductImage = styled.img`
   width: 100%;
-  height: auto;
-  background-color: #dee2e6; /* Gris placeholder */
+  height: 180px;
+  object-fit: cover;
+  background-color: #dee2e6;
 `;
 
-const Badge = styled.div`
-  background-color: #212529;
-  color: white;
-  position: absolute;
-  top: 0.5rem;
-  right: 0.5rem;
-  padding: 0.25rem 0.5rem;
-  border-radius: 0.25rem;
-  font-size: 0.75rem;
-  font-weight: 700;
-  z-index: 1;
+const ContentWrapper = styled.div`
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
 `;
 
-const CardBody = styled.div`
-  padding: 1.5rem;
-  text-align: center;
-  flex-grow: 1; /* Pousse le footer vers le bas */
-`;
-
-const ProductTitle = styled.h5`
-  font-weight: 700;
-  font-size: 1.25rem;
-  margin-bottom: 0.5rem;
+const ProductName = styled.h3`
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin: 0;
+  color: #333;
 `;
 
 const PriceContainer = styled.div`
-  margin-bottom: 1rem;
+  margin-bottom: 10px;
+`;
+
+const CurrentPrice = styled.span`
+  font-weight: bold;
+  color: #333;
 `;
 
 const OldPrice = styled.span`
   text-decoration: line-through;
-  color: #6c757d;
-  margin-right: 0.5rem;
+  color: #999;
+  margin-right: 8px;
+  font-size: 0.9rem;
 `;
 
-const CardFooter = styled.div`
-  padding: 1.5rem;
+const ActionButton = styled.button`
   background-color: transparent;
-  border-top: none;
-  text-align: center;
-  margin-top: auto; /* S'assure que le bouton est toujours en bas */
-`;
-
-const Button = styled.button`
-  background-color: transparent;
-  color: #212529;
-  border: 1px solid #212529;
-  padding: 0.375rem 0.75rem;
-  border-radius: 0.25rem;
-  font-size: 1rem;
+  color: #333;
+  border: 1px solid #333;
+  padding: 8px 16px;
+  border-radius: 4px;
   cursor: pointer;
-  transition: all 0.2s;
+  font-weight: 500;
+  transition: all 0.3s ease;
 
   &:hover {
-    background-color: #212529;
+    background-color: #333;
     color: white;
   }
 `;
 
-// --- COMPOSANT ---
-const ProductCard = ({ title, price, oldPrice, isSale }) => {
-    return (
-        <Card>
-            {/* Affichage conditionnel du badge */}
-            {isSale && <Badge>Sale</Badge>}
-            
-            <ProductImage src="https://dummyimage.com/450x300/dee2e6/6c757d.jpg" alt="Produit" />
-            
-            <CardBody>
-                <ProductTitle>{title}</ProductTitle>
-                
-                {/* Notation des étoiles (Optionnel, simplifié ici) */}
-                {title === "Special Item" || title === "Popular Item" ? (
-                   <div style={{color: "#ffc107", marginBottom: "0.5rem"}}>★★★★★</div> 
-                ) : null}
+const SaleBadge = styled.div`
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: black;
+  color: white;
+  padding: 4px 10px;
+  border-radius: 4px;
+  font-size: 0.8rem;
+  font-weight: bold;
+`;
 
-                <PriceContainer>
-                    {oldPrice && <OldPrice>{oldPrice}</OldPrice>}
-                    {price}
-                </PriceContainer>
-            </CardBody>
 
-            <CardFooter>
-                <Button>{title === "Fancy Product" ? "View options" : "Add to cart"}</Button>
-            </CardFooter>
-        </Card>
-    );
+const ProductCard = ({ product }) => {
+  return (
+    <CardContainer>
+
+      {product.hasSale && <SaleBadge>Sale</SaleBadge>}
+      
+      <ProductImage src={product.image} alt={product.name} />
+      
+      <ContentWrapper>
+        <ProductName>{product.name}</ProductName>
+        <PriceContainer>
+          {product.oldPrice && <OldPrice>{product.oldPrice}</OldPrice>}
+          <CurrentPrice>{product.price}</CurrentPrice>
+        </PriceContainer>
+        
+        <ActionButton>Add to cart</ActionButton>
+      </ContentWrapper>
+    </CardContainer>
+  );
 };
 
 export default ProductCard;
