@@ -1,12 +1,11 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import JeuDe from './components/jeuDe.jsx';
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
-  <React.StrictMode>
-  <JeuDe/>
-  </React.StrictMode>
-);
-root.render(<JeuDe />);
+import JeuDe from "./components/jeuDe";
 
+function App() {
+  return (
+    <div className="App">
+      <JeuDe valeurCache={6} />
+    </div>
+  );
+}
 
+export default App;
