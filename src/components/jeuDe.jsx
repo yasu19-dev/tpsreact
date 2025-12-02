@@ -28,17 +28,17 @@ class JeuDe extends React.Component {
 
   render() {
     const facesImages = [
-      "images/face1.PNG",
-      "images/face2.PNG",
-      "images/face3.PNG",
-      "images/face4.PNG",
-      "images/face5.PNG",
-      "/images/face6.PNG",
+      "face1.PNG",
+      "face2.PNG",
+      "face3.PNG",
+      "face4.PNG",
+      "face5.PNG",
+      "face6.PNG",
     ];
 
     return (
       <div>
-        <img src="images/Dé.PNG" alt="Dé" />
+        <img src="Dé.PNG" alt="Dé" />
         <h1>Jeu de Dé...</h1>
         <h2>face: {this.state.face !== null ? <img src={facesImages[this.state.face - 1]} alt={`Face ${this.state.face}`} /> : "..."}</h2>
         <h2>nombre d'essais: {this.state.compteur}</h2>
