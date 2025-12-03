@@ -45,7 +45,7 @@ class JeuDe extends React.Component {
         <h2>nombre d'essais: {this.state.compteur}</h2>
 
         {this.state.fin && (
-          <p style={{ color: "green", fontWeight: "bold", fontSize: "18px", fontFamily: "Arial" }}>Bravo, vous avez trouvé la face cachée !</p>
+          <p style={{ color: "green", fontWeight: "bold", fontSize: "18px", fontFamily: "Arial"   }}>Bravo, vous avez trouvé la face cachée !</p>
         )}
 
         <button onClick={() => this.jouerOuInitialiser()}>
