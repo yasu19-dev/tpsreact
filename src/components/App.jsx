@@ -10,7 +10,7 @@ const list=[
     {nom:"tomate",type:"legume"},
     {nom:"carotte",type:"legume"},
     {nom:"pomme de terre",type:"legume"},
-    {nom:"navet",type:"legume"},
+        {nom:"navet",type:"legume"},
     {nom:"poivron",type:"legume"}
 ]
     export default function App() {
@@ -18,7 +18,7 @@ const list=[
         const [resultas,setResultas]=useState([])
         function onChercheSubmitApp(type){
         setType(type)
-        setResultas(list.filter((item)=>item.type.toUpperCase()===type))
+        setResultas(list.filter((item)=>item.type.toUpperCase()==type))
 }
 return (
     <div className='App'>
