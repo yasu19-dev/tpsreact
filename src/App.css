@@ -1,0 +1,61 @@
+/* App.css */
+body {
+  background-color: #7BC77B; 
+  font-family: Arial, sans-serif;
+  padding: 20px;
+}
+
+h1 {
+  color: black;
+  margin-bottom: 20px;
+}
+
+.conteneur-utilisateurs {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.carte-utilisateur {
+  border: 1px solid #4CAF50;
+  background-color: #90EE90; 
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 2px 2px 5px rgba(0,0,0,0.1);
+}
+
+.info-ligne {
+  margin: 10px 0;
+  font-weight: 500;
+}
+
+.btn-details {
+  background-color: #e0e0e0;
+  border: 1px solid #999;
+  padding: 5px 10px;
+  cursor: pointer;
+  font-size: 14px;
+  margin-top: 10px;
+}
+
+.zone-posts {
+  margin-top: 20px;
+}
+
+.compteur-posts {
+  color: green;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.carte-post {
+  background-color: #FFCC80; 
+  border: 1px solid #FF9800;
+  padding: 15px;
+  margin-bottom: 10px;
+  border-radius: 3px;
+}
+
+.carte-post h4 {
+  margin-top: 0;
+}
