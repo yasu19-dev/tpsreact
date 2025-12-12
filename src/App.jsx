@@ -8,8 +8,9 @@ import "./index.css"
 //import UserGreeting from './conditional_rendering/UserGreeting'
 // import List from './Rendering_List/List'
 //import Lists from './Rendering_List/Lists'
-import Button from "./click_event/Button";  
-
+//import Button from "./click_event/ButtonCount";
+import Button from "./click_event/ButtonEvent";  
+import ProfilePicture from "./click_event/ProfilePicture";
 //Components-------------------------------------------------------
 
 // export default function App(){
@@ -100,9 +101,16 @@ import Button from "./click_event/Button";
 //     );
 // }
 
+
+//click-event -----------------------------------------------------------
+// function App(){
+//     return(<>
+//     <Button/>
+//     </>)
+// }
 function App(){
     return(<>
-    <Button/>
+    <ProfilePicture/>
     </>)
 }
 
