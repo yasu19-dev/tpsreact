@@ -9,8 +9,12 @@ import "./index.css"
 // import List from './Rendering_List/List'
 //import Lists from './Rendering_List/Lists'
 //import Button from "./click_event/ButtonCount";
-import Button from "./click_event/ButtonEvent";  
-import ProfilePicture from "./click_event/ProfilePicture";
+// import Button from "./click_event/ButtonEvent";  
+// import ProfilePicture from "./click_event/ProfilePicture";
+//import MyComponent from "./useState/MyComponent";
+//import Counter from "./useState/Counter";
+import MyComponent from "./onChange/Mycomponent";
+
 //Components-------------------------------------------------------
 
 // export default function App(){
@@ -108,15 +112,34 @@ import ProfilePicture from "./click_event/ProfilePicture";
 //     <Button/>
 //     </>)
 // }
+// function App(){
+//     return(<>
+//     <ProfilePicture/>
+//     </>)
+// }
+
+
+//useState-----------------------------------------------------------
+// function App(){
+//     return(<>
+//     <MyComponent/>
+//     </>)
+// }
+
+//Counter ---------------------------------------------
+
+// function App(){
+//     return(<>
+//     <Counter/>
+//     </>)
+// }
+
+//onChange ------------------------------------------------
 function App(){
     return(<>
-    <ProfilePicture/>
+    <MyComponent/>
     </>)
 }
-
-
-
-
 
 
 

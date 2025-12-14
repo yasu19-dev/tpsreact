@@ -1,8 +1,8 @@
-
+import jasmine from '../assets/jasmine.png';
 
 function ProfilePicture(){
-    const imageUrl = '../src/assets/jasmine.png';
-    return(<img src={imageUrl}></img>)
+    const handleClick = (e) => e.target.style.display = 'none';
+    return(<img onClick={(e) => handleClick(e) } src={jasmine} alt='ProfilePic'></img>)
 }
 
 export default ProfilePicture
