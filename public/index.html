@@ -1,43 +1,113 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
+    
+    <title>Title</title>
+    <!-- Required meta tags -->
     <meta charset="utf-8" />
-    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#000000" />
     <meta
-      name="description"
-      content="Web site created using create-react-app"
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
     />
-    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
-    <!--
-      manifest.json provides metadata used when your web app is installed on a
-      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
-    -->
-    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
-    <!--
-      Notice the use of %PUBLIC_URL% in the tags above.
-      It will be replaced with the URL of the `public` folder during the build.
-      Only files inside the `public` folder can be referenced from the HTML.
 
-      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
-      work correctly both with client-side routing and a non-root public URL.
-      Learn how to configure a non-root public URL by running `npm run build`.
-    -->
-    <title>React App</title>
+    <!-- Bootstrap CSS v5.2.1 -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+
+    <script src="https://unpkg.com/react@16/umd/react.development.js"></script>
+<script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
   </head>
+
   <body>
-    <noscript>You need to enable JavaScript to run this app.</noscript>
-    <div id="root"></div>
-    <!--
-      This HTML file is a template.
-      If you open it directly in the browser, you will see an empty page.
+    <header>
+      <!-- place navbar here -->
+    </header>
+    <main>
+      <div id="root"></div>
+      <!-- <script type="text/babel">
+        const produits = [
+    {
+      id: 1,
+      title: 'PC Portable Gamer HP VICTUS',
+      price: '7490 DH',
+      thumbnail : 'HP16D0195NF.jpg'
+    },
+    {
+      id: 2,
+      title: 'PC Portable Gamer HP VICTUS',
+      price: '2190 DH',
+      thumbnail : 'HP14424U3EA.jpg'
+    },
+    {
+      id: 3,
+      title: 'Pc Portable Chromebook Acer',
+      price: '3640 DH',
+      thumbnail: 'NXATHEF002.jpg'
+    },
+    {
+      id: 4,
+      title: 'PC Portable - HUAWEI',
+      price: '1270 DH',
+      thumbnail: 'HUA6901443442959.jpg'
+    },
+  ];
 
-      You can add webfonts, meta tags, or analytics to this file.
-      The build step will place the bundled scripts into the <body> tag.
+    function Product(props){
+      return (
+            <div className="col">
+              <div className="card shadow-sm"> 
+              <img  className="bd-placeholder-img card-img-top" src={`pictures/${props.data.thumbnail}`}/>
+                <div className="card-body">
+                  <p className="card-title">{props.data.title}</p>
+                  <p className="card-text">{props.data.price}</p>
+                  <div className="d-flex justify-content-between align-items-center">
+                    <div className="btn-group">
+                      <button type="button" className="btn btn-sm btn-outline-secondary">View</button>
+                    </div>
+              </div>
+            </div> 
+          </div>
+        </div>
+      )
+    };
 
-      To begin the development, run `npm start` or `yarn start`.
-      To create a production bundle, use `npm run build` or `yarn build`.
-    -->
+
+    function Products(){
+      return(
+        <div class='container'>
+          <div class="row">
+            {
+              produits.map((produit, index) => {
+                return <Product key={index} data={produit} /> 
+              })
+            }
+          </div>
+        </div>
+      )
+
+    }
+    ReactDOM.render(<Products />, document.getElementById('root'));
+      </script> -->
+    </main>
+    <footer>
+      <!-- place footer here -->
+    </footer>
+    <!-- Bootstrap JavaScript Libraries -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+      integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+      crossorigin="anonymous"
+    ></script>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+      integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+      crossorigin="anonymous"
+    ></script>
   </body>
 </html>
