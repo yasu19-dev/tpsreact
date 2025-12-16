@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>  
+    
+    <style>
+        .purple{color: violet}
+    </style>
+</head>
+<body>
+    <div id="root"></div>
+    <script type="text/babel">
+        var p = <p>Hello, JSX!</p>;
+        // Pour afficher p dans div 
+        // ReactDOM.render(p, document.getElementById('root'));
+
+        // Créer une liste de 5 élements en JSX // Ajouter des attributs 
+        var listeElement = <ul className="purple" id='liste1' style={{backgroundColor:'navy', fontFamily:'Arial'}}>
+            <li>Element 1</li>
+            <li>Element 2</li>
+            <li>Element 3</li>
+            <li>Element 4</li>
+            </ul>;
+        // ReactDOM.render(listeElement, document.getElementById('root'));
+
+        // Parcourir tableau element par element
+        var elements = ['Yasmine', 'Zaid', 'Oussama', 'Anas'];
+        var liste = <ul>
+            {
+                elements.map((element,index) =>
+                    <li key={index}>{element}</li>)
+            }
+            </ul>
+        // ReactDOM.render(liste, document.getElementById('root'));
+
+        // Creer une fonction qui retourne un code jsx et Transmettre un attribut dans un element evec Props
+        var Liste2 = function(props){
+            return <ul>
+            {
+                elements.map((element,index) =>
+                    <li key={index}>{props.test} {element}</li>)
+            }
+            </ul>
+        };
+        // ReactDOM.render(<Liste2 test="Bonjour"/>, document.getElementById('root'));
+
+        // Créer un element avec fonction
+        function ListeFunction(){
+            return <ul>
+            {
+                elements.map((element,index) =>
+                    <li key={index}>{element}</li>)
+            }
+            </ul>
+        }
+        // ReactDOM.render(<ListeFunction />, document.getElementById('root'));
+
+        // Créer un element avec classe
+        class ListeClasse extends React.Component{
+            render(){
+                return <ul>
+            {
+                elements.map((element,index) =>
+                    <li key={index}>{element}</li>)
+            }
+            </ul>
+            } 
+        };
+        ReactDOM.render(<ListeClasse />, document.getElementById('root'));
+    </script>
+</body>
+</html>
