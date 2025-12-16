@@ -11,7 +11,7 @@ function App() {
   // Données initiales
   const [courses, setCourses] = useState([
     { id: 1, titre: "React JS", description: "Introduction à React", formateur: "Bouchra" },
-    { id: 2, titre: "Node JS", description: "Backend avec Node", formateur: "Karim" }
+    { id: 2, titre: "Node JS", description: "Backend Laravel", formateur: "Karim" }
   ]);
 
   // Fonction pour ajouter un cours
