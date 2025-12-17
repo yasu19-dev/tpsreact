@@ -7,18 +7,17 @@ function AddCourse({ onAdd }) {
   const [formateur, setFormateur] = useState('');
   const navigate = useNavigate();
   
-  // Utilisation de useRef pour le focus
+  // Focus automatique sur le premier champ
   const inputRef = useRef(null);
-
+  
   useEffect(() => {
-    // Mettre le focus sur le champ titre au chargement du composant
     inputRef.current.focus();
   }, []);
 
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    // Validation simple
+    
     if (!titre || !description || !formateur) {
       alert("Veuillez remplir tous les champs !");
       return;
@@ -29,7 +28,7 @@ function AddCourse({ onAdd }) {
     // Communication vers le parent (App)
     onAdd(newCourse);
     
-    // Redirection vers la liste
+    // Redirection vers la liste des cours
     navigate('/courses');
   };
 
@@ -40,17 +39,14 @@ function AddCourse({ onAdd }) {
         <div className="form-group">
           <label>Titre :</label>
           <input 
-            type="text" 
-            ref={inputRef} // Liaison du ref
-            value={titre} 
+            type="text" ref={inputRef} value={titre} 
             onChange={(e) => setTitre(e.target.value)} 
           />
         </div>
         <div className="form-group">
           <label>Formateur :</label>
           <input 
-            type="text" 
-            value={formateur} 
+            type="text" value={formateur} 
             onChange={(e) => setFormateur(e.target.value)} 
           />
         </div>
