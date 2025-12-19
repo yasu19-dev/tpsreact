@@ -1,19 +1,15 @@
-import React from 'react';
-import Produits from './components/Produits';
-
-function App () {
-//   <BrowserRouter>
-//     <nav style={{padding: 10, background: '#eee'}}>
-//       <Link to="/">Produits</Link> | <Link to="/cart">Panier</Link>
-//     </nav>
-//     <Routes>
-//       <Route path="/" element={<ProductList />} />
-//       <Route path="/cart" element={<Cart />} />
-//     </Routes>
-//   </BrowserRouter>
-// 
+import { Route, Routes } from "react-router-dom";
+import Produits from "./components/Produits";
+import Panier from "./components/Panier";
+function App() {
+  return (
 <div className="App">
-  <Produits/>
+  <Routes>
+    <Route path='/' element={<Produits/>}></Route>
+    <Route path='/panier' element={<Panier/>}></Route>
+  </Routes>
 </div>
- } 
-export default App
+  );
+}
+
+export default App;
