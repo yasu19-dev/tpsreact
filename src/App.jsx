@@ -1,26 +1,12 @@
-import { Component } from "react"
+import Form from "./components/Form"
 
-class App extends Component {
-    constructor(props){
-        super(props);
-        this.state ={num:0};
-    }
-    inc = () => {
-        this.setState({num: this.state.num+1});
-    };
-    dec = () => {
-        this.setState({num: this.state.num-1});
-    };
-    render(){
-        return(
-            <div className="App">
-                <p>{this.state.num}</p>
-                <button onClick={this.inc}>Incrémenter</button>
-                <button onClick={this.dec}>Derementer</button>
-            </div>
+function App() {
+  return(
+    <div className="App">
+        <h1>Formulaire d'inscription</h1>
+        <Form/>
+    </div>
   )
-    }
-  
 }
 
 export default App
