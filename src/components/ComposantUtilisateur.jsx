@@ -12,7 +12,6 @@ const ComposantUtilisateur = ({ infos }) => {
 
   const gererAffichagePosts = () => {
     if (!estVisible && !posts) {
-      // Appel de l'action Redux
       dispatch(getPostsByUser(infos.id));
     }
     setEstVisible(!estVisible);
