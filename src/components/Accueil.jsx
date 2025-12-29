@@ -8,7 +8,7 @@ const Accueil = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
 
-  // Protection de la page
+  
   useEffect(() => {
     if (!user) {
       navigate('/');
@@ -20,7 +20,7 @@ const Accueil = () => {
     navigate('/');
   };
 
-  // Empêche l'affichage du reste si pas connecté
+  
   if (!user) return null;
 
   return (

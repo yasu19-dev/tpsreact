@@ -12,7 +12,7 @@ const Recherche = () => {
   
   const navigate = useNavigate();
 
-  // Protection de la page
+  
   useEffect(() => {
     if (!user) {
       navigate('/');

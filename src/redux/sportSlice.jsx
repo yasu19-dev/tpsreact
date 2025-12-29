@@ -37,7 +37,6 @@ const sportSlice = createSlice({
       );
     },
     modifierNiveau: (state, action) => {
-       // action.payload = { idSportif, nomSport, nouveauNiveau }
        const sport = state.sports.find(s => 
          s.idSportif === action.payload.idSportif && s.nomSport === action.payload.nomSport
        );

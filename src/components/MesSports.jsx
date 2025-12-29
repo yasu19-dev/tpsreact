@@ -8,7 +8,7 @@ const MesSports = () => {
   const navigate = useNavigate();
   const dispatch = useDispatch();
 
-  // Protection de la page
+  
   useEffect(() => {
     if (!user) {
       navigate('/');

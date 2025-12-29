@@ -26,7 +26,7 @@ const Inscription = () => {
       return;
     }
 
-    // Création de l'objet 
+    
     const newUser = {
       nom: formData.nom,
       prenom: formData.prenom,
