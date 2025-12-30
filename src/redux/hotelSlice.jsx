@@ -9,9 +9,9 @@ const initialState = {
   ],
   
   clients: [
-    { id: 1, nom: "John Doe", login: "john_doe", password: "password123" },
-    { id: 2, nom: "Jane Smith", login: "jane_smith", password: "qwerty456" },
-    { id: 3, nom: "Alice Johnson", login: "alice_johnson", password: "letmein789" }
+    { id: 1, nom: "Yasmine HARROUDI", login: "yas_har", password: "yas123" },
+    { id: 2, nom: "Zaid SAOUSAOU", login: "zaid_sao", password: "zaid456" },
+    { id: 3, nom: "Aya BELGHAZI", login: "aya_bel", password: "aya789" }
   ],
   
   reservations: []

@@ -14,7 +14,7 @@ function Historique() {
   const mesReservations = reservations.filter(r => r.id_client === parseInt(idClient));
 
   const handleDelete = (idRes) => {
-    dispatch(deleteReservation(idRes)); // Action supprimer [cite: 50]
+    dispatch(deleteReservation(idRes)); 
   };
 
   // Calcul montant total
