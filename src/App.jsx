@@ -1,5 +1,5 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import Menu from './Menu';
+import Menu from './components/Menu';
 import Authentification from './components/Authentification';
 import Historique from './components/Historique';
 import Chambres from './components/Chambres';
