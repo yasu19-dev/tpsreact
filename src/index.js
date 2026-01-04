@@ -5,7 +5,9 @@ import App from './App';
 import { Provider } from 'react-redux';
 import { legacy_createStore } from 'redux';
 // import reducer from './TP_redux_incrementer/reducer'; 
-import reducer from './Tp_redux_crud/reducer';
+//import reducer from './Tp_redux_crud/reducer';
+
+import reducer from './TP_Redux_filter/Config/reducer';
 
 const store = legacy_createStore(reducer);
 const root = ReactDOM.createRoot(document.getElementById('root'));

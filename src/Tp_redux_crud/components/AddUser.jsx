@@ -5,10 +5,13 @@ import { useNavigate } from "react-router-dom";
 
 function AddUser(){
     const count = useSelector(data=>data.users.length);
+    
     const [name,setName] = useState('');
     const [email, setEmail] = useState('');
+
     const dispatch = useDispatch();
     const navigate = useNavigate();
+
     const handleClick = ()=>{
         dispatch(ADD_USER({
             id:count+1,
