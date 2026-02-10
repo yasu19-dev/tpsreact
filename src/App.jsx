@@ -9,7 +9,8 @@ import MatchDetails from './components/MatchDetails';
 function App() {
   const initialMatchs = [
   {id: 1, name: 'Maroc vs Argentine', matchDay: '2030-02-15', location: 'Casablanca' },
-  {id: 2, name: 'Brésil vs Palestine', matchDay: '2030-02-18', location: 'Rabat' }];
+  {id: 2, name: 'Brésil vs Palestine', matchDay: '2030-02-18', location: 'Rabat' }
+];
 
   const [matchs, setMatchs] = useState(initialMatchs);
 
