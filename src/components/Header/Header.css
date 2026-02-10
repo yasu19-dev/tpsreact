@@ -1,0 +1,19 @@
+/* Header.css */
+.header {
+    background-color: #333; /* Fond gris foncé/noir */
+    padding: 20px;          /* Espace intérieur */
+    display: flex;          /* Pour aligner les liens côte à côte */
+    gap: 30px;              /* Espace entre les liens */
+}
+
+/* On style les liens (balises <a> générées par <Link>) */
+.header a {
+    color: white;           /* Texte en blanc */
+    text-decoration: none;  /* Enlever le soulignement */
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.header a:hover {
+    color: #ddd;            /* Petit effet au survol (optionnel) */
+}

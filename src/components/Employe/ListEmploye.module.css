@@ -1,0 +1,8 @@
+/* ListEmploye.module.css */
+.container {
+    display: flex;          /* Active le mode flexible */
+    flex-wrap: wrap;        /* Permet de passer à la ligne si pas de place */
+    gap: 20px;              /* Espace entre chaque carte d'employé */
+    padding: 20px;
+    justify-content: center; /* Centre les éléments dans la page */
+}
